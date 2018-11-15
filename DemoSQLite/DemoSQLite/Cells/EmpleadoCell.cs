@@ -44,7 +44,7 @@ namespace DemoSQLite.Cells
                 //TextColor = Color.White,
                 HorizontalOptions = LayoutOptions.End
             };
-            fechaContratoLabel.SetBinding(Label.TextProperty, new Binding("FechaContrato"));
+            fechaContratoLabel.SetBinding(Label.TextProperty, new Binding("FechaContratoEditado"));
 
             var salarioLabel = new Label
             {

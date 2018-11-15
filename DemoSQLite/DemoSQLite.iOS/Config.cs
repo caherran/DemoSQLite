@@ -9,7 +9,7 @@ namespace DemoSQLite.iOS
     public class Config : IConfig
     {
         private string _directorioDB;
-        private ISQLitePlatform _plataforma;
+        //private ISQLitePlatform _plataforma;
 
         public string DirectorioDB
         {
@@ -24,16 +24,16 @@ namespace DemoSQLite.iOS
             }
         }
 
-        public ISQLitePlatform Plataforma
-        {
-            get
-            {
-                if(_plataforma == null)
-                {
-                    _plataforma = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
-                }
-                return _plataforma;
-            }
-        }
+        //public ISQLitePlatform Plataforma
+        //{
+        //    get
+        //    {
+        //        if(_plataforma == null)
+        //        {
+        //            _plataforma = new SQLite.Net.Platform.XamarinIOS.SQLitePlatformIOS();
+        //        }
+        //        return _plataforma;
+        //    }
+        //}
     }
 }

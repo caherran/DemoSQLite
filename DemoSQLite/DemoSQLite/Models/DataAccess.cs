@@ -14,8 +14,10 @@ namespace DemoSQLite.Models
         public DataAccess()
         {
             var config = DependencyService.Get<IConfig>();
-            connection = new SQLiteConnection(config.Plataforma, System.IO.Path.Combine(config.DirectorioDB, "Empleados.db3"), false);
-            connection.CreateTable<Empleado>();
+
+            connection = new SQLiteConnection(System.IO.Path.Combine(config.DirectorioDB, "Empleados.db3"));
+            if (connection != null)
+                connection.CreateTable<Empleado>();
         }
 
         public void InsertEmpleado(Empleado empleado)
